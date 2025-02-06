@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imagen a API</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+        
+        .gallery-item-container {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .gallery-item-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Sube tu imagen a la API</h1>
+
+    <!-- Formulario de carga -->
+    <input type="file" id="fileInput" accept="image/*" />
+    <button id="uploadBtn">Subir Imagen</button>
+    <p id="status"></p>
+
+    <!-- Contenedor para mostrar la imagen -->
+    <div id="imageContainer" style="display: none;">
+        <img id="uploadedImage" src="" alt="Imagen subida" />
+    </div>
+
+    <!-- Botón para obtener los IDs de las fotos -->
+<!-- Botón para obtener los IDs de las fotos -->
+<button id="getPhotoIdsBtn">Obtener IDs de fotos</button>
+
+<!-- Contenedor de la galería donde se mostrarán las imágenes -->
+<div id="gallery" class="gallery">
+    <!-- Las imágenes se agregarán aquí dinámicamente -->
+</div>
+
+
+
+    <!-- Incluir el script de la API -->
+    <script src="uploadScript.js"></script>
+</body>
+</html>
